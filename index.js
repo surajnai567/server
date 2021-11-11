@@ -17,6 +17,7 @@ io.on("connection", (socket) => {
     //We need to use the Socket (the link between the server and the connected user(s)).
     socket.emit("welcome", "Hello and Welcome to the Server");
     socket.on('w', (msg) => {
+    socket.emit("data", msg);
     console.log('message: ' + msg);
   });
 });

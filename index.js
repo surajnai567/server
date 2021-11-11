@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-const port = 8080;
+const port = process.env.YOUR_PORT || process.env.PORT || 80;
 const http = require("http").createServer();
 const io = require("socket.io")(http);
 //Listen for a client connection

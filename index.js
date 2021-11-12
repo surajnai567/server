@@ -18,6 +18,6 @@ io.on("connection", (socket) => {
     socket.emit("welcome", "Hello and Welcome to the Server");
     socket.on('server', (msg) => {
     socket.emit("client", msg);
-    console.log('receive data: ' + msg);
+    console.log('receive data from: ' +socket.id + ": "+ msg);
   });
 });
